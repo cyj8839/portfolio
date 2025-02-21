@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My Portfolio</title>
+  <style>
+    body {
+      background-color: #c7ff2e;
+      color: #000000;
+      font-family: 'Apple SD 산돌고딕 Neo', sans-serif;
+      margin-top: 20px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .image-container {
+      display: flex;
+      justify-content: center; /* 가로 중앙 정렬 */
+      gap: 40px;
+      margin: 20px;
+      flex-wrap: wrap;
+    }
+
+    .image-wrapper {
+      position: relative;
+      width: 200px;
+      height: 200px;
+    }
+
+    .hover-image {
+      width: 200px;
+      height: 700px;
+      cursor: pointer;
+      transition: opacity 0.3s ease;
+      position: absolute;
+      top: 0;
+      left: 0;
+    }
+
+    .hover-image.default {
+      opacity: 1;
+    }
+
+    .image-wrapper:hover .hover-image.default {
+      opacity: 0;
+    }
+
+    .hover-image:not(.default) {
+      opacity: 0;
+    }
+
+    .image-wrapper:hover .hover-image:not(.default) {
+      opacity: 1;
+    }
+  </style>
+</head>
+<body>
+  <div class="image-container">
+    <div class="image-wrapper">
+      <a href="pdf/kkum.pdf" target="_blank">
+        <img src="images/a.png" alt="기본 이미지" class="hover-image default">
+        <img src="images/a2.png" alt="대체 이미지" class="hover-image">
+      </a>
+    </div>
+
+    <div class="image-wrapper">
+      <a href="pdf/brook.pdf" target="_blank">
+        <img src="images/b.png" alt="기본 이미지" class="hover-image default">
+        <img src="images/b2.png" alt="대체 이미지" class="hover-image">
+      </a>
+    </div>
+
+    <div class="image-wrapper">
+      <a href="pdf/seio.pdf" target="_blank">
+        <img src="images/c.png" alt="추가 이미지 1" class="hover-image default">
+        <img src="images/c2.png" alt="추가 이미지 1 대체" class="hover-image">
+      </a>
+    </div>
+
+    <div class="image-wrapper">
+      <a href="pdf/227.pdf" target="_blank">
+        <img src="images/d.png" alt="추가 이미지 2" class="hover-image default">
+        <img src="images/d2.png" alt="추가 이미지 2 대체" class="hover-image">
+      </a>
+    </div>
+
+    <div class="image-wrapper">
+      <a href="pdf/maha.pdf" target="_blank">
+        <img src="images/e.png" alt="추가 이미지 3" class="hover-image default">
+        <img src="images/e2.png" alt="추가 이미지 3 대체" class="hover-image">
+      </a>
+    </div>
+  </div>
+</body>
+</html>
